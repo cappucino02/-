@@ -1,0 +1,24 @@
+<!DOCTYPE html> <!-- 声明文档类型为HTML -->
+<html lang="zh-CN"> <!-- 设置页面的语言为简体中文 -->
+<head> <!-- 文档头部，包含元数据 -->
+    <meta charset="UTF-8"> <!-- 设置字符编码为UTF-8 -->
+    <title>中日医学护理语料库</title> <!-- 设置页面标题 -->
+    <link rel="stylesheet" type="text/css" href="style.css"> <!-- 链接外部CSS样式表 -->
+</head>
+<body> <!-- 文档主体，包含页面的可见内容 -->
+    <h1>护您“日译”周全</h1> <!-- 页面的主标题 -->
+    <div class="search-box"> <!-- 搜索框容器 -->
+        <input type="text" id="search-input" placeholder="输入关键词" oninput="showSuggestions(this.value)"> <!-- 文本输入框，用于输入搜索关键词 -->
+        <select id="language-select" onchange="search()"> <!-- 下拉选择框，用于选择搜索语言，当选择改变时触发搜索函数 -->
+            <option value="chinese">中文</option> <!-- 下拉选项，表示中文 -->
+            <option value="japanese">日文</option> <!-- 下拉选项，表示日文 -->
+        </select>
+        <button onclick="search()">搜索</button> <!-- 搜索按钮，点击时触发搜索函数 -->
+        <div id="suggestions-box"></div>
+    </div>
+    <div id="results"> <!-- 搜索结果展示容器 -->
+        <!-- 搜索结果将在这里展示 -->
+    </div>
+    <script src="script.js"></script> <!-- 引入外部JavaScript文件 -->
+</body>
+</html>

@@ -1,0 +1,158 @@
+body {
+    font-family: Arial, sans-serif; /* 设置字体为Arial或无衬线字体 */
+    background-color: #f5f5dc; /* 设置背景颜色为浅黄色 */
+    margin: 0; /* 移除默认外边距 */
+    padding: 0; /* 移除默认内边距 */
+}
+
+body {
+    font-family: Arial, sans-serif; /* 设置字体为Arial或无衬线字体 */
+    background-color: #f5f5dc; /* 设置背景颜色为浅黄色 */
+    margin: 0; /* 移除默认外边距 */
+    padding: 0; /* 移除默认内边距 */
+    position: relative; /* 设置定位方式为相对定位 */
+    overflow: auto; /* 允许在需要时显示滚动条 */
+    min-height: 100vh; /* 确保至少有视口高度的内容 */
+}
+
+body::after {
+    content: ''; /* 伪元素内容为空 */
+    position: absolute; /* 设置绝对定位 */
+    top: 0; /* 顶部对齐 */
+    left: 0; /* 左侧对齐 */
+    width: 100%; /* 宽度为100% */
+    height: 100%; /* 高度为100% */
+    background-image: url('img/护理医学图片.png'); /* 设置背景图片 */
+    background-size: cover; /* 背景图片覆盖整个元素 */
+    opacity: 0.3; /* 设置透明度为0.3 */
+    z-index: -1; /* 设置层级为-1，确保在内容之下 */
+}
+
+
+h1 {
+    text-align: center; /* 标题居中对齐 */
+    padding: 10px; /* 设置内边距 */
+    margin: 0; /* 移除默认外边距 */
+    background-color: #fff8dc; /* 设置背景颜色为浅黄色 */
+}
+
+.search-box {
+    text-align: center; /* 搜索框居中对齐 */
+    padding: 10px; /* 设置内边距 */  
+    align-items: center;
+}
+
+#search-input {
+    width: 50%; /* 设置宽度为50% */
+    max-width: 600px; /* 设置最大宽度 */
+    height: 40px; /* 设置高度 */
+    padding: 5px; /* 设置内边距 */
+    font-size: 16px; /* 设置字体大小 */
+    margin: 0 auto 10px auto; /* 设置外边距，使搜索框居中且有间隔 */
+    border: 1px solid #ddd; /* 设置边框 */
+    border-radius: 5px; /* 设置边框圆角 */
+}
+
+#language-select, button {
+    height: 40px; /* 设置高度 */
+    padding: 10px; /* 设置内边距 */
+    font-size: 16px; /* 设置字体大小 */
+    margin: 10px 5px; /* 设置外边距 */
+    border: 1px solid #ddd; /* 设置边框 */
+    border-radius: 5px; /* 设置边框圆角 */
+    background-color: #dcdcdc; /* 设置背景颜色为灰色 */
+}
+
+#results {
+    width: 80%; /* 设置宽度为80% */
+    max-width: 800px; /* 设置最大宽度 */
+    margin: 20px auto; /* 设置外边距，使结果框居中 */
+    padding: 5px; /* 设置内边距 */
+    background-color: #ffffff; /* 设置背景颜色为白色 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 设置阴影效果 */
+    border-radius: 5px; /* 设置边框圆角 */
+}
+
+.result-item {
+    border-bottom: 1px solid #eee; /* 设置底部边框 */
+    padding: 20px; /* 设置内边距 */
+    margin: 20px auto; /* 设置外边距，使结果项居中且有间隔 */
+    max-width: 800px; /* 设置最大宽度 */
+    background-color: #ffffff; /* 设置背景颜色为白色 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 设置阴影效果 */
+    border-radius: 10px; /* 设置边框圆角 */
+}
+
+.result-section {
+    display: flex; /* 设置为弹性盒布局 */
+    justify-content: start; /* 内容靠左对齐 */
+    align-items: center; /* 项目垂直居中对齐 */
+    margin-bottom: 20px; /* 设置下外边距 */
+}
+
+.result-section-title {
+    min-width: 100px; /* 设置最小宽度 */
+    font-weight: bold; /* 设置字体加粗 */
+    margin-right: 15px; /* 设置右外边距 */
+}
+
+.result-section-content {
+    flex: 1; /* 设置弹性盒子占据剩余空间 */
+}
+
+@media (max-width: 768px) {
+    #search-input {
+        width: 70%; /* 小屏幕上设置宽度为70% */
+    }
+
+    .result-section {
+        flex-direction: column; /* 小屏幕上设置弹性盒子垂直排列 */
+        align-items: flex-start; /* 项目靠左对齐 */
+    }
+
+    .result-section-title {
+        margin-bottom: 5px; /* 小屏幕上设置标题和内容之间的间隔 */
+    }
+}
+
+.term-title {
+    font-size: 28px; /* 设置术语标题的字体大小 */
+ 
+}
+
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: help;
+    color: blue; /* 将文本颜色设置为蓝色 */
+}
+
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -100px;
+
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+
