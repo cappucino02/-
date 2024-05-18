@@ -19,6 +19,31 @@
     <div id="results"> <!-- 搜索结果展示容器 -->
         <!-- 搜索结果将在这里展示 -->
     </div>
+
+    <!-- 联系我们部分 -->
+    <section class="contact-us">
+        <div class="contact-content">
+            <h2>联系我们</h2>
+            <p>有任何问题或者建议，欢迎通过以下方式联系我们或填写下面的表单。</p>
+            <form id="contact-form">
+                <input type="email" placeholder="您的电子邮件" required>
+                <textarea placeholder="您的留言" required></textarea>
+                <button type="submit">提交</button>
+            </form>
+        </div>
+        <ul>
+            <li>邮箱：867120904@qq.com</li>
+            <li>电话：158-1710-5523</li>
+            <li>地址：中国衡阳市蒸湘区衡南县衡祁路228号南华大学（雨母校区）</li>
+        </ul>
+    </section>
+
     <script src="script.js"></script> <!-- 引入外部JavaScript文件 -->
+    <script>
+      document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        alert(`谢谢您的留言，我们会尽快回复您！\nEmail: ${email}\nMessage: ${message}`);
+      });
+    </script>
 </body>
 </html>

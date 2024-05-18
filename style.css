@@ -154,5 +154,71 @@ h1 {
 }
 
 
+/* 其他样式保持不变 */
 
+.contact-us {
+    position: fixed; /* 固定在页面底部 */
+    bottom: 0;
+    left: 0;
+    width: 100%; /* 占据整个页面宽度 */
+    background-color: #fff8dc; /* 设置背景颜色 */
+    padding: 10px 0; /* 设置内边距 */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* 设置阴影效果 */
+    box-sizing: border-box; /* 包括填充和边框在内的总宽度和高度 */
+    border-top: 1px solid #ddd; /* 设置顶部边框 */
+    display: flex; /* 使用弹性盒布局 */
+    justify-content: space-around; /* 项目之间的空间均等分布 */
+    align-items: center; /* 垂直居中对齐 */
+    text-align: center; /* 设置文本居中对齐 */
+}
 
+.contact-content {
+    flex: 1; /* 占据可用空间 */
+    padding: 0 20px; /* 左右内边距 */
+}
+
+.contact-us h2 {
+    margin: 5px 0; /* 调整标题的外边距 */
+    font-size: 16px; /* 调整标题大小 */
+}
+
+.contact-us p {
+    font-size: 12px; /* 调整文本大小 */
+    margin: 5px 0; /* 设置文本的外边距 */
+}
+
+.contact-us form {
+    display: flex;
+    flex-direction: column; /* 设置为列方向的弹性盒布局 */
+    gap: 5px; /* 设置表单元素之间的间距 */
+}
+
+.contact-us input,
+.contact-us textarea {
+    width: 100%; /* 设置宽度为100% */
+    padding: 5px; /* 设置内边距 */
+    border: 1px solid #ddd; /* 设置边框 */
+    border-radius: 5px; /* 设置边框圆角 */
+    box-sizing: border-box; /* 包括填充和边框在内的总宽度和高度 */
+    font-size: 12px; /* 设置字体大小 */
+}
+
+.contact-us button {
+    padding: 5px 10px; /* 设置内边距 */
+    border: none; /* 移除边框 */
+    border-radius: 5px; /* 设置边框圆角 */
+    background-color: #dcdcdc; /* 设置背景颜色 */
+    cursor: pointer; /* 设置鼠标样式 */
+    font-size: 12px; /* 设置字体大小 */
+}
+
+.contact-us ul {
+    list-style: none; /* 移除列表项的默认样式 */
+    padding: 0; /* 移除列表的内边距 */
+    font-size: 12px; /* 设置字体大小 */
+    margin: 0; /* 设置列表的外边距 */
+}
+
+.contact-us li {
+    margin: 3px 0; /* 设置列表项的外边距 */
+}
