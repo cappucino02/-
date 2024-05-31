@@ -1,133 +1,132 @@
 body {
-    font-family: Arial, sans-serif; /* 设置字体为Arial或无衬线字体 */
-    background-color: #f5f5dc; /* 设置背景颜色为浅黄色 */
-    margin: 0; /* 移除默认外边距 */
-    padding: 0; /* 移除默认内边距 */
-}
-
-body {
-    font-family: Arial, sans-serif; /* 设置字体为Arial或无衬线字体 */
-    background-color: #f5f5dc; /* 设置背景颜色为浅黄色 */
-    margin: 0; /* 移除默认外边距 */
-    padding: 0; /* 移除默认内边距 */
-    position: relative; /* 设置定位方式为相对定位 */
-    overflow: auto; /* 允许在需要时显示滚动条 */
-    min-height: 100vh; /* 确保至少有视口高度的内容 */
+    font-family: Arial, sans-serif;
+    background-color: #f5f5dc;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 body::after {
-    content: ''; /* 伪元素内容为空 */
-    position: absolute; /* 设置绝对定位 */
-    top: 0; /* 顶部对齐 */
-    left: 0; /* 左侧对齐 */
-    width: 100%; /* 宽度为100% */
-    height: 100%; /* 高度为100% */
-    background-image: url('img/护理医学图片.png'); /* 设置背景图片 */
-    background-size: cover; /* 背景图片覆盖整个元素 */
-    opacity: 0.3; /* 设置透明度为0.3 */
-    z-index: -1; /* 设置层级为-1，确保在内容之下 */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('img/护理医学图片.png');
+    background-size: cover;
+    opacity: 0.3;
+    z-index: -1;
 }
 
+.container {
+    flex: 1;
+}
 
 h1 {
-    text-align: center; /* 标题居中对齐 */
-    padding: 10px; /* 设置内边距 */
-    margin: 0; /* 移除默认外边距 */
-    background-color: #fff8dc; /* 设置背景颜色为浅黄色 */
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+    background-color: #fff8dc;
 }
 
 .search-box {
-    text-align: center; /* 搜索框居中对齐 */
-    padding: 10px; /* 设置内边距 */  
+    text-align: center;
+    padding: 10px;  
     align-items: center;
 }
 
 #search-input {
-    width: 50%; /* 设置宽度为50% */
-    max-width: 600px; /* 设置最大宽度 */
-    height: 40px; /* 设置高度 */
-    padding: 5px; /* 设置内边距 */
-    font-size: 16px; /* 设置字体大小 */
-    margin: 0 auto 10px auto; /* 设置外边距，使搜索框居中且有间隔 */
-    border: 1px solid #ddd; /* 设置边框 */
-    border-radius: 5px; /* 设置边框圆角 */
+    width: 50%;
+    max-width: 600px;
+    height: 40px;
+    padding: 5px;
+    font-size: 16px;
+    margin: 0 auto 10px auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
 #language-select, button {
-    height: 40px; /* 设置高度 */
-    padding: 10px; /* 设置内边距 */
-    font-size: 16px; /* 设置字体大小 */
-    margin: 10px 5px; /* 设置外边距 */
-    border: 1px solid #ddd; /* 设置边框 */
-    border-radius: 5px; /* 设置边框圆角 */
-    background-color: #dcdcdc; /* 设置背景颜色为灰色 */
+    height: 40px;
+    padding: 10px;
+    font-size: 16px;
+    margin: 10px 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #dcdcdc;
 }
 
 #results {
-    width: 80%; /* 设置宽度为80% */
-    max-width: 800px; /* 设置最大宽度 */
-    margin: 20px auto; /* 设置外边距，使结果框居中 */
-    padding: 5px; /* 设置内边距 */
-    background-color: #ffffff; /* 设置背景颜色为白色 */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 设置阴影效果 */
-    border-radius: 5px; /* 设置边框圆角 */
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 5px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
 }
 
 .result-item {
-    border-bottom: 1px solid #eee; /* 设置底部边框 */
-    padding: 20px; /* 设置内边距 */
-    margin: 20px auto; /* 设置外边距，使结果项居中且有间隔 */
-    max-width: 800px; /* 设置最大宽度 */
-    background-color: #ffffff; /* 设置背景颜色为白色 */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 设置阴影效果 */
-    border-radius: 10px; /* 设置边框圆角 */
+    border-bottom: 1px solid #eee;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
 .result-section {
-    display: flex; /* 设置为弹性盒布局 */
-    justify-content: start; /* 内容靠左对齐 */
-    align-items: center; /* 项目垂直居中对齐 */
-    margin-bottom: 20px; /* 设置下外边距 */
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
 .result-section-title {
-    min-width: 100px; /* 设置最小宽度 */
-    font-weight: bold; /* 设置字体加粗 */
-    margin-right: 15px; /* 设置右外边距 */
+    min-width: 100px;
+    font-weight: bold;
+    margin-right: 15px;
 }
 
 .result-section-content {
-    flex: 1; /* 设置弹性盒子占据剩余空间 */
+    flex: 1;
+}
+
+.result-section-content p {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
 }
 
 @media (max-width: 768px) {
     #search-input {
-        width: 70%; /* 小屏幕上设置宽度为70% */
+        width: 70%;
     }
 
     .result-section {
-        flex-direction: column; /* 小屏幕上设置弹性盒子垂直排列 */
-        align-items: flex-start; /* 项目靠左对齐 */
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .result-section-title {
-        margin-bottom: 5px; /* 小屏幕上设置标题和内容之间的间隔 */
+        margin-bottom: 5px;
     }
 }
 
 .term-title {
-    font-size: 28px; /* 设置术语标题的字体大小 */
- 
+    font-size: 28px;
 }
-
 
 .tooltip {
     position: relative;
     display: inline-block;
     cursor: help;
-    color: blue; /* 将文本颜色设置为蓝色 */
+    color: blue;
 }
-
 
 .tooltip .tooltiptext {
     visibility: hidden;
@@ -137,13 +136,11 @@ h1 {
     text-align: center;
     padding: 5px 0;
     border-radius: 6px;
-
     position: absolute;
     z-index: 1;
     bottom: 100%;
     left: 50%;
     margin-left: -100px;
-
     opacity: 0;
     transition: opacity 0.3s;
 }
@@ -153,72 +150,106 @@ h1 {
     opacity: 1;
 }
 
-
-/* 其他样式保持不变 */
-
 .contact-us {
-    position: fixed; /* 固定在页面底部 */
-    bottom: 0;
-    left: 0;
-    width: 100%; /* 占据整个页面宽度 */
-    background-color: #fff8dc; /* 设置背景颜色 */
-    padding: 10px 0; /* 设置内边距 */
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* 设置阴影效果 */
-    box-sizing: border-box; /* 包括填充和边框在内的总宽度和高度 */
-    border-top: 1px solid #ddd; /* 设置顶部边框 */
-    display: flex; /* 使用弹性盒布局 */
-    justify-content: space-around; /* 项目之间的空间均等分布 */
-    align-items: center; /* 垂直居中对齐 */
-    text-align: center; /* 设置文本居中对齐 */
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff8dc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-sizing: border-box;
+    text-align: center;
 }
 
 .contact-content {
-    flex: 1; /* 占据可用空间 */
-    padding: 0 20px; /* 左右内边距 */
+    flex: 1;
+    padding: 0 20px;
 }
 
 .contact-us h2 {
-    margin: 5px 0; /* 调整标题的外边距 */
-    font-size: 16px; /* 调整标题大小 */
+    margin: 5px 0;
+    font-size: 16px;
 }
 
 .contact-us p {
-    font-size: 12px; /* 调整文本大小 */
-    margin: 5px 0; /* 设置文本的外边距 */
+    font-size: 12px;
+    margin: 5px 0;
 }
 
 .contact-us form {
     display: flex;
-    flex-direction: column; /* 设置为列方向的弹性盒布局 */
-    gap: 5px; /* 设置表单元素之间的间距 */
+    flex-direction: column;
+    gap: 5px;
 }
 
 .contact-us input,
 .contact-us textarea {
-    width: 100%; /* 设置宽度为100% */
-    padding: 5px; /* 设置内边距 */
-    border: 1px solid #ddd; /* 设置边框 */
-    border-radius: 5px; /* 设置边框圆角 */
-    box-sizing: border-box; /* 包括填充和边框在内的总宽度和高度 */
-    font-size: 12px; /* 设置字体大小 */
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 12px;
 }
 
 .contact-us button {
-    padding: 5px 10px; /* 设置内边距 */
-    border: none; /* 移除边框 */
-    border-radius: 5px; /* 设置边框圆角 */
-    background-color: #dcdcdc; /* 设置背景颜色 */
-    cursor: pointer; /* 设置鼠标样式 */
-    font-size: 12px; /* 设置字体大小 */
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #dcdcdc;
+    cursor: pointer;
+    font-size: 12px;
 }
 
 .contact-us ul {
-    list-style: none; /* 移除列表项的默认样式 */
-    padding: 0; /* 移除列表的内边距 */
-    font-size: 12px; /* 设置字体大小 */
-    margin: 0; /* 设置列表的外边距 */
+    list-style: none;
+    padding: 0;
+    font-size: 12px;
+    margin: 0;
 }
 
 .contact-us li {
-    margin: 3px 0; /* 设置列表项的外边距 */
+    margin: 3px 0;
+}
+
+.audio-text {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.speaker-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.result-section-content .audio-text {
+    margin-bottom: 10px;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px 0;
+    background-color: #fff8dc;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+
+.footer p {
+    font-size: 12px;
+    color: #888;
+    margin-top: 10px;
+}
+
+.contact-button {
+    background-color: #dcdcdc;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
 }

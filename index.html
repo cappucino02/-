@@ -1,49 +1,31 @@
-<!DOCTYPE html> <!-- 声明文档类型为HTML -->
-<html lang="zh-CN"> <!-- 设置页面的语言为简体中文 -->
-<head> <!-- 文档头部，包含元数据 -->
-    <meta charset="UTF-8"> <!-- 设置字符编码为UTF-8 -->
-    <title>中日医学护理语料库</title> <!-- 设置页面标题 -->
-    <link rel="stylesheet" type="text/css" href="style.css"> <!-- 链接外部CSS样式表 -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>中日医学护理语料库</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body> <!-- 文档主体，包含页面的可见内容 -->
-    <h1>护您“日译”周全</h1> <!-- 页面的主标题 -->
-    <div class="search-box"> <!-- 搜索框容器 -->
-        <input type="text" id="search-input" placeholder="输入关键词" oninput="showSuggestions(this.value)"> <!-- 文本输入框，用于输入搜索关键词 -->
-        <select id="language-select" onchange="search()"> <!-- 下拉选择框，用于选择搜索语言，当选择改变时触发搜索函数 -->
-            <option value="chinese">中文</option> <!-- 下拉选项，表示中文 -->
-            <option value="japanese">日文</option> <!-- 下拉选项，表示日文 -->
-        </select>
-        <button onclick="search()">搜索</button> <!-- 搜索按钮，点击时触发搜索函数 -->
-        <div id="suggestions-box"></div>
-    </div>
-    <div id="results"> <!-- 搜索结果展示容器 -->
-        <!-- 搜索结果将在这里展示 -->
-    </div>
-
-    <!-- 联系我们部分 -->
-    <section class="contact-us">
-        <div class="contact-content">
-            <h2>联系我们</h2>
-            <p>有任何问题或者建议，欢迎通过以下方式联系我们或填写下面的表单。</p>
-            <form id="contact-form">
-                <input type="email" placeholder="您的电子邮件" required>
-                <textarea placeholder="您的留言" required></textarea>
-                <button type="submit">提交</button>
-            </form>
+<body>
+    <div class="container">
+        <h1>护您“日译”周全</h1>
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="输入关键词" oninput="showSuggestions(this.value)">
+            <select id="language-select" onchange="search()">
+                <option value="chinese">中文</option>
+                <option value="japanese">日文</option>
+            </select>
+            <button onclick="search()">搜索</button>
+            <div id="suggestions-box"></div>
         </div>
-        <ul>
-            <li>邮箱：867120904@qq.com</li>
-            <li>电话：158-1710-5523</li>
-            <li>地址：中国衡阳市蒸湘区衡南县衡祁路228号南华大学（雨母校区）</li>
-        </ul>
-    </section>
+        <div id="results"></div>
+        <!--<button onclick="speakResults()">语音反馈</button> -->
+    </div>
 
-    <script src="script.js"></script> <!-- 引入外部JavaScript文件 -->
-    <script>
-      document.getElementById('contact-form').addEventListener('submit', function(event) {
-        event.preventDefault();
-        alert(`谢谢您的留言，我们会尽快回复您！\nEmail: ${email}\nMessage: ${message}`);
-      });
-    </script>
+    <div class="footer">
+        <button onclick="window.location.href='contact.html'" class="contact-button">联系我们</button>
+        <p>版权所有@2024中日医学护理语料库</p>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
